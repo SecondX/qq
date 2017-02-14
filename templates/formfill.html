@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block title%}台灣國際造船股份有限公司-商源資料填寫 {% endblock %}
+{% block style%}
+<style>
+input[type=text], select {
+    width: 280px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+</style>
+{% endblock %}
+
+{% block midle %}
+  <form action="">
+<div>
+    <label for="company_name">公司名稱：</label>
+    <input type="text" id="company_name" name="company_name">
+
+    <label for="vatid" align="right">統一編號：</label>
+    <input type="text" id="vatid" name="vatid" align="right">
+</div>
+<div>
+    <label for="address" >公司地址：</label>
+    <input type="text" id="adderss" name="address" class="address">
+</div>
+<div>
+    <label for="principal" >負責人：　</label>
+    <input type="text" id="principal" name="principal">
+</div>
+    <label for="country" align="bottom">國別：　</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+<br/>
+<div>
+    <label for="contact" >聯絡人：</label>
+    <input type="text" id="principal" name="principal">
+    <label for="email" >E-mail</label>
+    <input type="text" id="email" name="email">
+
+</div>
+<div>
+    <label for="tel" >電話</label>
+    <input type="text" id="tel" name="tel">
+    <label for="fax" >傳真</label>
+    <input type="text" id="tax" name="tax">
+</div>
+<div>
+    <label for="product" >營業項目</label>
+    <input type="text" id="product" name="product">
+</div>
+    <input type="submit" value="Submit">
+  </form>
+{% endblock %}
+{% block tail %}
+<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+{% endblock %}

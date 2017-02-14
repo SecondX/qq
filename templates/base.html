@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %}{% endblock %}</title>
+	<style type="text/css">
+	body{
+		margin: 0;
+	}
+	header{
+		height: 100px;
+	}
+	.top{
+		height: 100px;
+		background-color: #24458c;
+		/*vertical-align: middle;*/
+	}
+	.top img{
+		vertical-align: middle;
+		padding-top: 26px;
+		margin: auto auto;
+		display: block;
+	}
+	</style>
+	{% block style %}{% endblock %}
+	{% block head %}{% endblock %}
+</head>
+<body>
+<header>
+	<div class="top">
+		<img src="{% static "assets/logo.svg" %}"/>
+	</div>
+</header>
+{% block midle %}{% endblock %}
+{% block tail %}{% endblock %}
+{% block footer %}{% endblock %}
+</body>
+</html>
