@@ -2,6 +2,22 @@
 {% block title%}台灣國際造船股份有限公司-商源資料填寫 {% endblock %}
 {% block style%}
 <style>
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
 input[type=text], select {
     width: 280px;
     padding: 12px 20px;
@@ -68,6 +84,10 @@ input[type=submit]:hover {
 <div>
     <label for="product" >營業項目</label>
     <input type="text" id="product" name="product">
+</div>
+<div class="fileUpload btn btn-primary">
+	<span>Upload</span>
+    <input type="file" id="attachments" name="attachments" class="upload" multiple>
 </div>
     <input type="submit" value="Submit">
   </form>
